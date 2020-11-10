@@ -1,12 +1,13 @@
 name: '百度贴吧签到'
 
 on:
-  push:
-    branches:
-      - master
-  schedule:
-    - cron: '5 16,22 * * *'
-
+    workflow_dispatch:
+    schedule:
+        - cron: "5 16,22 * * *"
+    watch:
+        types: [started]
+    repository_dispatch:
+        types: main
 jobs:
   tieba_sign:
     runs-on: ubuntu-latest
