@@ -95,6 +95,9 @@ async function downloader(content) {
     if (content.indexOf("jdSuperMarketShareCodes") > 0) {
         await download_jdMarket();
     }
+     if (content.indexOf("jd_baiTiao") > 0) {
+        await download_jdBaiTiao();
+    }
 }
 
 async function download_jdcookie() {
