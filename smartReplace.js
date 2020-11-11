@@ -134,6 +134,13 @@ async function download_jdMarket(content) {
     console.log("下载京小超分享码代码完毕");
 }
 
+async function download_jdBaiTiao(content) {
+    let response = await axios.get("https://github.com/yangtingxiao/QuantumultX/scripts/jd/jd_baiTiao.js");
+    let fcontent = response.data;
+    await fs.writeFileSync("./jd_baiTiao.js", fcontent, "utf8");
+    console.log("下载京东天天领白条券代码完毕");
+}
+
 module.exports = {
     replaceWithSecrets,
 };
