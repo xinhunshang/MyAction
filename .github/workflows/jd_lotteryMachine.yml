@@ -27,16 +27,16 @@ jobs:
                   npm install
             - name: "运行 【京东抽奖机】"
               run: |
-                  node jd_lotteryMachine.js
+                  node onlyOneExecute.js
               env:
                   JD_COOKIE: ${{ secrets.JD_COOKIE }}
                   JD_DEBUG: ${{ secrets.JD_DEBUG }}
                   PUSH_KEY: ${{ secrets.PUSH_KEY }}
                   BARK_PUSH: ${{ secrets.BARK_PUSH }}
                   BARK_SOUND: ${{ secrets.BARK_SOUND }}
+                  PLANT_BEAN_SHARECODES: ${{ secrets.PLANT_BEAN_SHARECODES }}
                   TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
                   TG_USER_ID: ${{ secrets.TG_USER_ID }}
                   DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
                   DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
-                  UNSUBSCRIBE: ${{ secrets.UNSUBSCRIBE }}
-                  SYNCURL: https://github.com/yangtingxiao/QuantumultX/scripts/jd/jd_lotteryMachine.js
+                  SYNCURL: https://github.com/lxk0301/jd_scripts/raw/master/jd_lotteryMachine.js
