@@ -6,7 +6,7 @@ name: 天天领白条券
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 9 * * *"
+        - cron: "0 7,9 * * *"
     watch:
         types: [started]
     repository_dispatch:
@@ -27,7 +27,7 @@ jobs:
                   npm install
             - name: "运行 【天天领白条券】"
               run: |
-                  node onlyOneExecute.js
+                  node jd_baiTiao.js
               env:
                   JD_COOKIE: ${{ secrets.JD_COOKIE }}
                   JD_DEBUG: ${{ secrets.JD_DEBUG }}
@@ -38,4 +38,5 @@ jobs:
                   TG_USER_ID: ${{ secrets.TG_USER_ID }}
                   DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
                   DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
-                  SYNCURL: https://github.com/yangtingxiao/QuantumultX/tree/master/scripts/jd/jd_baiTiao.js
+                  UNSUBSCRIBE: ${{ secrets.UNSUBSCRIBE }}
+                  SYNCURL: https://github.com/yangtingxiao/QuantumultX/scripts/jd/jd_baiTiao.js
