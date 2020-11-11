@@ -36,7 +36,7 @@ jobs:
         run: |
           npm install
       - name: '运行 【111】'
-        run: |
+        run: | 
           node jd_bigWinner.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
