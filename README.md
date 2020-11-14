@@ -37,3 +37,4 @@ xinhunshang对任何脚本问题概不负责，包括但不限于由任何脚本
 |`COOKIE_91WII`|91WIICookie|chrome开发者工具获取,搜索FORMHASH,找到cookie|
 |`COOKIE_91WII_FORMHASH`|91WII参数|chrome开发者工具获取,搜索FORMHASHM在url后的一串id|
 [浏览器获得京东COOKIE](https://github.com/lxk0301/jd_scripts/blob/master/backUp/GetJdCookie.md) 
+[京东环境变量说明](https://github.com/lxk0301/jd_scripts/blob/master/githubAction.md) 
