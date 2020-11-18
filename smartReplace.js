@@ -48,6 +48,20 @@ async function replaceWithSecrets(content, Secrets, ext) {
                 replacements.push({ key: "$.getdata('jdUnsubscribeStopShop')", value: `'${usinfo[3]}'` });
             }
         }
+        if (content.indexOf("function requireConfig()") >= 0 && content.indexOf("jd_bean_sign.js") >= 0) {
+            replacements.push({
+                key: "resultPath = err ? '/tmp/result.txt' : resultPath;",
+                value: `resultPath = err ? './tmp/result.txt' : resultPath;`,
+            });
+            replacements.push({
+                key: "JD_DailyBonusPath = err ? '/tmp/JD_DailyBonus.js' : JD_DailyBonusPath;",
+                value: `JD_DailyBonusPath = err ? './tmp/JD_DailyBonus.js' : JD_DailyBonusPath;`,
+            });
+            replacements.push({
+                key: "outPutUrl = err ? '/tmp/' : outPutUrl;",
+                value: `outPutUrl = err ? './tmp/' : outPutUrl;`,
+            });
+        }
     }
     return batchReplace(content, replacements);
 }
@@ -95,7 +109,6 @@ async function downloader(content) {
     if (content.indexOf("jdSuperMarketShareCodes") > 0) {
         await download_jdMarket();
     }
-    
 }
 
 async function download_jdcookie() {
@@ -133,13 +146,6 @@ async function download_jdMarket(content) {
     let fcontent = response.data;
     await fs.writeFileSync("./jdSuperMarketShareCodes.js", fcontent, "utf8");
     console.log("下载京小超分享码代码完毕");
-}
-
-async function download_jdBaiTiao(content) {
-    let response = await axios.get("https://github.com/yangtingxiao/QuantumultX/tree/master/scripts/jd/jd_baiTiao.js");
-    let fcontent = response.data;
-    await fs.writeFileSync("./jd_baiTiao.js", fcontent, "utf8");
-    console.log("下载京东天天领白条券代码完毕");
 }
 
 module.exports = {
