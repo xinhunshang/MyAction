@@ -109,6 +109,16 @@ async function downloader(content) {
     if (content.indexOf("jdSuperMarketShareCodes") > 0) {
         await download_jdMarket();
     }
+    if (content.indexOf("jdFactoryShareCodes") > 0) {
+        await download_jdFactoryShareCodes();
+    }
+}
+
+async function download_jdFactoryShareCodes() {
+    let response = await axios.get("https://github.com/lxk0301/jd_scripts/raw/master/jdFactoryShareCodes.js");
+    let fcontent = response.data;
+    await fs.writeFileSync("./jdFactoryShareCodes.js", fcontent, "utf8");
+    console.log("下载东东工厂分享码解析完毕");
 }
 
 async function download_jdcookie() {
