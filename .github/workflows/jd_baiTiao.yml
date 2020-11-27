@@ -27,7 +27,7 @@ jobs:
                   npm install
             - name: "运行 【天天领白条券】"
               run: |
-                  node onlyOneExecute.js
+                  node jd_baiTiao.js
               env:
                   JD_COOKIE: ${{ secrets.JD_COOKIE }}
                   JD_DEBUG: ${{ secrets.JD_DEBUG }}
