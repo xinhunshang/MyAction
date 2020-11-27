@@ -39,4 +39,4 @@ jobs:
                   DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
                   DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
                   UNSUBSCRIBE: ${{ secrets.UNSUBSCRIBE }}
-                  SYNCURL: https://github.com/yangtingxiao/QuantumultX/scripts/jd/jd_baiTiao.js
+                  SYNCURL: https://github.com/yangtingxiao/QuantumultX/tree/master/scripts/jd/jd_baiTiao.js
