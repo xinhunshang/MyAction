@@ -112,6 +112,9 @@ async function downloader(content) {
     if (content.indexOf("jdFactoryShareCodes") > 0) {
         await download_jdFactoryShareCodes();
     }
+    if (content.indexOf("jd_baiTiao") > 0) {
+        await download_baiTiao();
+    }
 }
 
 async function download_jdFactoryShareCodes() {
@@ -158,6 +161,12 @@ async function download_jdMarket(content) {
     console.log("下载京小超分享码代码完毕");
 }
 
+async function download_baiTiao(content) {
+    let response = await axios.get("https://github.com/yangtingxiao/QuantumultX/scripts/jd/jd_baiTiao.js");
+    let fcontent = response.data;
+    await fs.writeFileSync("./jd_baiTiao.js", fcontent, "utf8");
+    console.log("下载京东白条代码完毕");
+}
 module.exports = {
     replaceWithSecrets,
 };
