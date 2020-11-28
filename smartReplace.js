@@ -112,6 +112,10 @@ async function downloader(content) {
     if (content.indexOf("jdFactoryShareCodes") > 0) {
         await download_jdFactory();
     }
+    if (content.indexOf("jdDreamFactoryShareCodes") > 0) {
+        await download_jdDreamFactory();
+    }
+
 }
 
 async function download_jdcookie() {
@@ -153,10 +157,15 @@ async function download_jdMarket(content) {
 async function download_jdFactory(content) {
     let response = await axios.get("https://github.com/lxk0301/jd_scripts/raw/master/jdFactoryShareCodes.js");
     let fcontent = response.data;
-    await fs.writeFileSync("./jdFactoryShareCodes.js.js", fcontent, "utf8");
+    await fs.writeFileSync("./jdFactoryShareCodes.js", fcontent, "utf8");
     console.log("下载东东工厂分享码代码完毕");
 }
-
+async function download_jdDreamFactory(content) {
+    let response = await axios.get("https://github.com/lxk0301/jd_scripts/raw/master/jdDreamFactoryShareCodes.js");
+    let fcontent = response.data;
+    await fs.writeFileSync("./jdDreamFactoryShareCodes.js", fcontent, "utf8");
+    console.log("下载惊喜工厂分享码代码完毕");
+}
 module.exports = {
     replaceWithSecrets,
 };
