@@ -1,16 +1,16 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 京东种豆得豆
+name: 京东金融养猪猪
 
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 23,0-14/1 * * *"
+        - cron: "23 16 * * *"
     watch:
         types: [started]
     repository_dispatch:
-        types: jd_plantBean
+        types: jd_petPig
 
 jobs:
     build:
@@ -25,7 +25,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【种豆得豆】"
+            - name: "运行 【京东金融养猪猪】"
               run: |
                   node onlyOneExecute.js
               env:
@@ -34,9 +34,8 @@ jobs:
                   PUSH_KEY: ${{ secrets.PUSH_KEY || github.event.client_payload.PUSH_KEY }}
                   BARK_PUSH: ${{ secrets.BARK_PUSH || github.event.client_payload.BARK_PUSH }}
                   BARK_SOUND: ${{ secrets.BARK_SOUND || github.event.client_payload.BARK_SOUND }}
-                  PLANT_BEAN_SHARECODES: ${{ secrets.PLANT_BEAN_SHARECODES || github.event.client_payload.PLANT_BEAN_SHARECODES }}
                   TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN || github.event.client_payload.TG_BOT_TOKEN }}
                   TG_USER_ID: ${{ secrets.TG_USER_ID || github.event.client_payload.TG_USER_ID }}
                   DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN || github.event.client_payload.DD_BOT_TOKEN }}
                   DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET || github.event.client_payload.DD_BOT_SECRET }}
-                  SYNCURL: https://github.com/lxk0301/jd_scripts/raw/master/jd_plantBean.js
+                  SYNCURL: https://github.com/lxk0301/jd_scripts/raw/master/jd_pigPet.js
