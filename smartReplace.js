@@ -94,6 +94,13 @@ async function downloader_jd() {
             "京喜故事互助码"
         );
     }
+       if (remoteContent.indexOf("jdSplitShareCodes") > 0) {
+        await download(
+            "https://github.com/lxk0301/jd_scripts/raw/master/jdSplitShareCodes.js",
+            "./jdJxStoryShareCodes.js",
+            "京东年终奖互助码"
+        );
+    }
 }
 
 async function downloader_notify() {
