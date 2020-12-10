@@ -1,13 +1,13 @@
-name: 京喜财富岛
+name: 京东直播
 
 on:
     workflow_dispatch:
     schedule:
-        - cron: "30 * * * *"
+        - cron: "30 16 * * *"
     watch:
         types: [started]
     repository_dispatch:
-        types: jx_cfd
+        types: jd_live
 
 jobs:
     build:
@@ -23,7 +23,7 @@ jobs:
             - name: 安装依赖包
               run: |
                   npm install
-            - name: "运行【京喜财富岛】"
+            - name: "运行【京东直播】"
               run: |
                   node onlyOneExecute.js
               env:
@@ -36,4 +36,4 @@ jobs:
                   DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN || github.event.client_payload.DD_BOT_TOKEN }}
                   DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET || github.event.client_payload.DD_BOT_SECRET }}
                   DO_NOT_FORK: ${{ secrets.DO_NOT_FORK || github.event.client_payload.DO_NOT_FORK }}
-                  SYNCURL: https://github.com/MoPoQAQ/Script/raw/main/Me/jx_cfd.js
+                  SYNCURL: https://github.com/shylocks/jd_scripts/raw/master/jd_live.js
