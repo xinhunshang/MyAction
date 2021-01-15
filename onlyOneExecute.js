@@ -26,10 +26,17 @@ async function start() {
     try {
         await changeFiele();
         await exec("node executeOnce.js", { stdio: "inherit" });
+        //await exec("node executeOnce.js >> result.txt")//根据返回内容判断进行通知
     } catch (e) {
         console.log("执行异常:" + e);
     }
     console.log("执行完毕");
+        const path = "./result.txt";
+        let result = "";
+        if (fs.existsSync(path)) {
+            result = fs.readFileSync(path, "utf8");
+            console.log(result);
+        }
 }
 
 start();
