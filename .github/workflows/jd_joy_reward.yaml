@@ -49,4 +49,4 @@ jobs:
                   JD_JOY_REWARD_NAME: ${{ github.event.client_payload.JD_JOY_REWARD_NAME || secrets.JD_JOY_REWARD_NAME }}
                   JD_JOY_REWARD_NOTIFY: ${{ github.event.client_payload.JD_JOY_REWARD_NOTIFY || secrets.JD_JOY_REWARD_NOTIFY }}
                   GITHUB: ${{ github.event.client_payload.GITHUB || secrets.GITHUB }}
-                  SYNCURL: https://github.com/LXK9301/jd_scripts/raw/master/jd_joy_reward.js
+                  SYNCURL: https://github.com/an0na/jd_scripts/raw/master/jd_joy_reward.js

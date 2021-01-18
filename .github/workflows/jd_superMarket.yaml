@@ -51,4 +51,4 @@ jobs:
                   SUPERMARKET_LOTTERY: ${{ github.event.client_payload.SUPERMARKET_LOTTERY || secrets.SUPERMARKET_LOTTERY }}
                   SUPERMARKET_SHARECODES: ${{ github.event.client_payload.SUPERMARKET_SHARECODES || secrets.SUPERMARKET_SHARECODES }}
                   GITHUB: ${{ github.event.client_payload.GITHUB || secrets.GITHUB }}
-                  SYNCURL: https://github.com/LXK9301/jd_scripts/raw/master/jd_superMarket.js
+                  SYNCURL: https://github.com/an0na/jd_scripts/raw/master/jd_superMarket.js
