@@ -6,7 +6,7 @@ name: 京东互助码获取并提交
 on:
     workflow_dispatch:
     schedule:
-        - cron: "5 20 1,10,20 * *" # 每月1/10/20号凌晨四点零五分跑一次互助码自动提交
+        - cron: "5 20 1,8,16,24 * *" # 每月1/10/20号凌晨四点零五分跑一次互助码自动提交
     watch:
         types: [started]
     repository_dispatch:

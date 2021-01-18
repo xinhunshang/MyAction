@@ -49,4 +49,4 @@ jobs:
                   PET_NOTIFY_CONTROL: ${{ github.event.client_payload.PET_NOTIFY_CONTROL || secrets.PET_NOTIFY_CONTROL }}
                   PETSHARECODES: ${{ github.event.client_payload.PETSHARECODES || secrets.PETSHARECODES }}
                   GITHUB: ${{ github.event.client_payload.GITHUB || secrets.GITHUB }}
-                  SYNCURL: https://github.com/an0na/jd_scripts/raw/master/jd_pet.js
+                  SYNCURL: https://raw.githubusercontent.com/an0na/jd_scripts_new/master/jd_pet.js
