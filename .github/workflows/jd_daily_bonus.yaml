@@ -45,4 +45,4 @@ jobs:
                   JD_BEAN_SIGN_STOP_NOTIFY: ${{ github.event.client_payload.JD_BEAN_SIGN_STOP_NOTIFY || secrets.JD_BEAN_SIGN_STOP_NOTIFY }}
                   JD_BEAN_SIGN_NOTIFY_SIMPLE: ${{ github.event.client_payload.JD_BEAN_SIGN_NOTIFY_SIMPLE || secrets.JD_BEAN_SIGN_NOTIFY_SIMPLE }}
                   GITHUB: ${{ github.event.client_payload.GITHUB || secrets.GITHUB }}
-                  SYNCURL: https://github.com/an0na/jd_scripts/raw/master/jd_bean_sign.js
+                  SYNCURL: https://github.com/LXK9301/jd_scripts/raw/master/jd_bean_sign.js
