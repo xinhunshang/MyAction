@@ -41,7 +41,7 @@ xinhunshang对任何脚本问题概不负责，包括但不限于由任何脚本
 [京东环境变量说明](https://github.com/lxk0301/jd_scripts/blob/master/githubAction.md) 
 
 
-## 鸣谢
+## 鸣谢 
 
 [@NobyDa](https://github.com/NobyDa) - 京东每日签到
 
