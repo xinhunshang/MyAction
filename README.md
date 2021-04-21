@@ -1,4 +1,4 @@
-# 不要fork!不要fork
+# 不要fork!不要fork 
 请在Options->secrets->添加变量GITHUB,值为exit
 ## 特别声明: 
 
