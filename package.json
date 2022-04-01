@@ -1,35 +1,29 @@
 {
-    "name": "myactions",
-    "version": "1.0.0",
-    "description": "sign everything",
-    "main": "app.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/sazs34/MyActions.git"
-    },
-    "keywords": [
-        "sign"
-    ],
-    "author": "sazs",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/sazs34/MyActions/issues"
-    },
-    "homepage": "https://github.com/sazs34/MyActions#readme",
-    "dependencies": {
-        "request": "^2.88.2",
-        "request-promise": "^4.2.5",
-        "crypto-js": "^4.0.0",
-        "got": "^11.5.1",
-        "http-server": "^0.12.3",
-        "node-schedule": "^1.3.2",
-        "tough-cookie": "^4.0.0",
-        "tunnel": "0.0.6",
-        "axios": "0.20.0",
-        "download": "^8.0.0",
-        "node-cron": "2.0.3"
-    }
+  "name": "Actions_smzdm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Manga.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiegto/Actions_smzdm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiegto/Actions_smzdm/issues"
+  },
+  "homepage": "https://github.com/jiegto/Actions_smzdm#readme",
+  "dependencies": {
+    "download": "^8.0.0",
+    "request": "^2.88.2",
+    "axios": "^0.19.2",
+    "crypto-js": "^4.0.0",
+    "request-promise": "^4.2.5",
+    "got": "^11.7.0",
+    "tough-cookie": "^4.0.0"
+  }
 }
